@@ -240,7 +240,7 @@ optionsDesc global pprefs p =
       (title, tabulate (prefTabulateFill pprefs) (getGroup <$> l))
       where
         -- Handle NOTE: [Nested group alignment] 3. here i.e. indent the
-        -- right Doc (help text) according to its indention level and
+        -- right Doc (help text) according to its indentation level and
         -- global maxGroupLevel. Notice there is an inverse relationship here,
         -- as the further the entire group is indented, the less we need to
         -- indent the help text.
@@ -311,7 +311,7 @@ optionsDesc global pprefs p =
     maxGroupLevel :: Int
     maxGroupLevel = findMaxGroupLevel docs
 
-    -- Finds the maxium OptGroup level.
+    -- Finds the maximum OptGroup level.
     findMaxGroupLevel :: [Maybe (OptGroup, (Doc, Doc))] -> Int
     findMaxGroupLevel = foldl' (\acc -> max acc . optGroupToLevel) 0 . catMaybes
 
