@@ -11,9 +11,8 @@ module Options.Applicative.BashCompletion
     zshCompletionScript,
   ) where
 
-import Control.Applicative hiding(asum)
+import Control.Applicative
 import Prelude
-import Data.Foldable ( asum )
 import Data.List ( isPrefixOf )
 import Data.Maybe ( fromMaybe, listToMaybe )
 
