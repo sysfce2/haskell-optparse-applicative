@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 -- | You don't need to import this module to enable bash completion.
 --
 -- See
@@ -13,7 +14,9 @@ module Options.Applicative.BashCompletion
 
 import Control.Applicative
 import Prelude
+#if !defined(__MHS__)
 import Data.Foldable ( asum )
+#endif
 import Data.List ( isPrefixOf )
 import Data.Maybe ( fromMaybe, listToMaybe )
 
